@@ -43,15 +43,15 @@ describe( 'Patch helpers', () => {
 		expect( patch.moveToSrc( developIndexSvn ) ).not.toBe( true );
 	} );
 
-	it( 'core.git.wordpress.org diffs should always be applied in the svn folder', () => {
+	it( 'core.git.finpress.org diffs should always be applied in the svn folder', () => {
 		expect( patch.moveToSrc( coreGit ) ).toBe( true );
 	} );
 
-	it( 'core.svn.wordpress.org diffs should always be applied in the svn folder', () => {
+	it( 'core.svn.finpress.org diffs should always be applied in the svn folder', () => {
 		expect( patch.moveToSrc( coreSvn ) ).toBe( true );
 	} );
 
-	it( 'core.svn.wordpress.org diffs from trunk should always be applied in the src folder', () => {
+	it( 'core.svn.finpress.org diffs from trunk should always be applied in the src folder', () => {
 		expect( patch.moveToSrc( coreTrunkSvn ) ).toBe( true );
 		expect( patch.isAb( coreTrunkSvn ) ).toBe( true );
 	} );

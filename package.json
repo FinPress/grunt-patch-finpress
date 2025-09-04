@@ -1,19 +1,19 @@
 {
-	"name": "grunt-patch-wordpress",
+	"name": "grunt-patch-finpress",
 	"version": "4.0.0",
-	"description": "Patch your core WordPress.",
-	"author": "The WordPress Contributors",
+	"description": "Patch your core FinPress.",
+	"author": "The FinPress Contributors",
 	"license": "MIT",
 	"keywords": [
 		"gruntplugin"
 	],
-	"homepage": "https://github.com/wordpress/grunt-patch-wordpress",
+	"homepage": "https://github.com/finpress/grunt-patch-finpress",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/wordpress/grunt-patch-wordpress.git"
+		"url": "git://github.com/finpress/grunt-patch-finpress.git"
 	},
 	"bugs": {
-		"url": "https://github.com/wordpress/grunt-patch-wordpress/issues"
+		"url": "https://github.com/finpress/grunt-patch-finpress/issues"
 	},
 	"engines": {
 		"node": ">=20.10.0",
@@ -29,7 +29,7 @@
 		]
 	},
 	"npmPackageJsonLintConfig": {
-		"extends": "@wordpress/npm-package-json-lint-config",
+		"extends": "@finpress/npm-package-json-lint-config",
 		"rules": {
 			"valid-values-license": [
 				"error",
@@ -46,7 +46,7 @@
 		"xmlrpc": "^1.3.2"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.10.0",
+		"@finpress/scripts": "^30.10.0",
 		"concurrently": "^8.2.2"
 	},
 	"scripts": {

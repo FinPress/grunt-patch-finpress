@@ -27,11 +27,11 @@ describe( 'regular expressions', () => {
 	it( 'url from a list of attachments', () => {
 		const matches = regex.patchAttachments( html23994 );
 		const url =
-			'core.trac.wordpress.org' +
+			'core.trac.finpress.org' +
 			regex.urlsFromAttachmentList( matches[ 0 ] )[ 1 ];
 
 		expect( url ).toBe(
-			'core.trac.wordpress.org/attachment/ticket/23994/23994.diff'
+			'core.trac.finpress.org/attachment/ticket/23994/23994.diff'
 		);
 	} );
 
@@ -48,36 +48,36 @@ describe( 'regular expressions', () => {
 	} );
 
 	it.each( [
-		[ 'https://github.com/WordPress/wordpress-develop/pull/740/', false ], // trailing slash
-		[ 'https://github.com/WordPress/wordpress-develop/pull/740', false ], // no trailing slash
+		[ 'https://github.com/FinPress/finpress-develop/pull/740/', false ], // trailing slash
+		[ 'https://github.com/FinPress/finpress-develop/pull/740', false ], // no trailing slash
 		[
-			'https://github.com/WordPress/wordpress-develop/pull/740/checks',
+			'https://github.com/FinPress/finpress-develop/pull/740/checks',
 			false,
 		], // checks
 		[
-			'https://github.com/WordPress/wordpress-develop/pull/740/files',
+			'https://github.com/FinPress/finpress-develop/pull/740/files',
 			false,
 		], // files
 		[
-			'https://github.com/WordPress/wordpress-develop/pull/740.diff',
+			'https://github.com/FinPress/finpress-develop/pull/740.diff',
 			false,
 		], // already diffed
 		[
-			'https://github.com/WordPress/wordpress-develop/pull/740.patch',
+			'https://github.com/FinPress/finpress-develop/pull/740.patch',
 			false,
 		], // already patched
 		[
-			'https://patch-diff.githubusercontent.com/raw/WordPress/wordpress-develop/pull/740.diff',
+			'https://patch-diff.githubusercontent.com/raw/FinPress/finpress-develop/pull/740.diff',
 			false,
 		], // already diffed and redirected
 		[
-			'https://patch-diff.githubusercontent.com/raw/WordPress/wordpress-develop/pull/740.patch',
+			'https://patch-diff.githubusercontent.com/raw/FinPress/finpress-develop/pull/740.patch',
 			false,
 		], // already diffed and redirected with patch
-		[ 'https://git.com/WordPress/wordpress-develop/pull/740/files', true ], // not github url
+		[ 'https://git.com/FinPress/finpress-develop/pull/740/files', true ], // not github url
 	] )( 'github url %s should get normalized', ( url, blank ) => {
 		const expected =
-			'https://patch-diff.githubusercontent.com/raw/WordPress/wordpress-develop/pull/740.diff';
+			'https://patch-diff.githubusercontent.com/raw/FinPress/finpress-develop/pull/740.diff';
 
 		if ( blank ) {
 			expect( regex.githubConvert( url ) ).toBe( false );

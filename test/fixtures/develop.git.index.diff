@@ -7,5 +7,5 @@ index dd3d554..aeffc32 100644
 +
 +
  /**
-  * Front to the WordPress application. This file doesn't do anything, but loads
-  * wp-blog-header.php which does and tells WordPress to load the theme.
+  * Front to the FinPress application. This file doesn't do anything, but loads
+  * wp-blog-header.php which does and tells FinPress to load the theme.

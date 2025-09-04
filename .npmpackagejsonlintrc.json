@@ -1,5 +1,5 @@
 {
-	"extends": "@wordpress/npm-package-json-lint-config",
+	"extends": "@finpress/npm-package-json-lint-config",
 	"rules": {
 		"valid-values-license": [ "error", [ "MIT" ] ],
 		"description-format": [
@@ -12,7 +12,7 @@
 		"prefer-no-devDependencies": "error",
 		"require-publishConfig": "error",
 		"require-repository-directory": "error",
-		"valid-values-author": [ "error", [ "The WordPress Contributors" ] ],
+		"valid-values-author": [ "error", [ "The FinPress Contributors" ] ],
 		"valid-values-publishConfig": [
 			"error",
 			[

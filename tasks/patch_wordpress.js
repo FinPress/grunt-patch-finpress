@@ -1,6 +1,6 @@
 /*
- * grunt-patch-wordpress
- * https://github.com/WordPress/grunt-patch-wordpress
+ * grunt-patch-finpress
+ * https://github.com/FinPress/grunt-patch-finpress
  * Based on https://gist.github.com/markjaquith/4219135
  *
  *
@@ -24,7 +24,7 @@ const mapOldToNewFilePath = require( '../lib/map_old_to_new_file_path.js' );
 module.exports = function ( grunt ) {
 	let tempFile = 'wppatch.diff';
 	const defaults = {
-		tracUrl: 'core.trac.wordpress.org',
+		tracUrl: 'core.trac.finpress.org',
 	};
 
 	function isSvn() {
@@ -171,7 +171,7 @@ module.exports = function ( grunt ) {
 			url: patchUrl,
 			headers: {
 				'User-Agent':
-					'grunt-patch-wordpress; https://github.com/WordPress/grunt-patch-wordpress',
+					'grunt-patch-finpress; https://github.com/FinPress/grunt-patch-finpress',
 			},
 		};
 		request( requestOptions, ( error, response, body ) => {
@@ -263,7 +263,7 @@ module.exports = function ( grunt ) {
 			url: patchUrl,
 			headers: {
 				'User-Agent':
-					'grunt-patch-wordpress; https://github.com/WordPress/grunt-patch-wordpress',
+					'grunt-patch-finpress; https://github.com/FinPress/grunt-patch-finpress',
 			},
 		};
 		request( requestOptions, ( error, response, body ) => {
@@ -290,7 +290,7 @@ module.exports = function ( grunt ) {
 		grunt.log.errorlns( 'To use this command, please:' );
 		grunt.log.errorlns( '' );
 		grunt.log.errorlns(
-			'1) have a diff or patch in your WordPress Directory'
+			'1) have a diff or patch in your FinPress Directory'
 		);
 		grunt.log.errorlns( '' );
 		grunt.log.errorlns(
@@ -298,11 +298,11 @@ module.exports = function ( grunt ) {
 		);
 		grunt.log.errorlns( '' );
 		grunt.log.errorlns(
-			'3) enter a ticket url, e.g. grunt patch:https://core.trac.wordpress.org/ticket/15705'
+			'3) enter a ticket url, e.g. grunt patch:https://core.trac.finpress.org/ticket/15705'
 		);
 		grunt.log.errorlns( '' );
 		grunt.log.errorlns(
-			'4) enter a patch url, e.g. grunt patch:https://core.trac.wordpress.org/attachment/ticket/11817/13711.diff'
+			'4) enter a patch url, e.g. grunt patch:https://core.trac.finpress.org/attachment/ticket/11817/13711.diff'
 		);
 		grunt.log.errorlns( '' );
 
@@ -348,8 +348,8 @@ module.exports = function ( grunt ) {
 	}
 
 	grunt.registerTask(
-		'patch_wordpress',
-		'Patch your develop-wordpress directory like a boss',
+		'patch_finpress',
+		'Patch your develop-finpress directory like a boss',
 		function ( ticket, afterProtocal ) {
 			const done = this.async();
 			const options = this.options( defaults );
@@ -382,7 +382,7 @@ module.exports = function ( grunt ) {
 
 	grunt.registerTask(
 		'upload_patch',
-		'Upload the current diff of your develop-wordpress directory to Trac',
+		'Upload the current diff of your develop-finpress directory to Trac',
 		function ( ticketNumber ) {
 			const done = this.async();
 			const options = this.options( defaults );
@@ -458,12 +458,12 @@ module.exports = function ( grunt ) {
 						{
 							type: 'input',
 							name: 'username',
-							message: 'Enter your WordPress.org username',
+							message: 'Enter your FinPress.org username',
 						},
 						{
 							type: 'password',
 							name: 'password',
-							message: 'Enter your WordPress.org password',
+							message: 'Enter your FinPress.org password',
 						},
 					] )
 					.then( ( answers ) => {

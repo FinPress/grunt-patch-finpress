@@ -1,6 +1,6 @@
-# Contributing to Grunt Patch WordPress
+# Contributing to Grunt Patch FinPress
 
-Welcome! Thanks for your interest in contributing to Grunt Patch WordPress.
+Welcome! Thanks for your interest in contributing to Grunt Patch FinPress.
 
 Please feel free to open a ticket for support or with a feature request.
 
